@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - College Helpdesk</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5ff;
+            padding: 25px;
+        }
+        .container {
+            max-width: 650px;
+            margin: 20px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #d5dced;
+        }
+        h1 { color: #3159cf; }
+        label { display: block; margin-top: 15px; }
+        input, textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px;
+            margin-top: 7px;
+            border: 1px solid #bbb;
+            border-radius: 7px;
+        }
+        button {
+            margin-top: 18px;
+            padding: 12px 20px;
+            background: #3159cf;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+        .message { color: #167647; }
+        a { color: #3159cf; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 FAQ Admin Panel</h1>
+        <p>Add college questions and answers to the database.</p>
+
+        {% if message %}
+            <p class="message">{{ message }}</p>
+        {% endif %}
+
+        <form method="POST" action="/admin">
+            <label for="keywords">Question Keywords</label>
+            <input
+                id="keywords"
+                type="text"
+                name="keywords"
+                placeholder="e.g. scholarship fees"
+                required
+            >
+
+            <label for="answer">Answer</label>
+            <textarea
+                id="answer"
+                name="answer"
+                rows="4"
+                placeholder="Enter the answer"
+                required
+            ></textarea>
+
+            <button type="submit">Save FAQ</button>
+        </form>
+
+        <p><a href="/">Back to Home</a></p>
+        <p><a href="/chatbot">Open Chatbot</a></p>
+    </div>
+</body>
+</html>

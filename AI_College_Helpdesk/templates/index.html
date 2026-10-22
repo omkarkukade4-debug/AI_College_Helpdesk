@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI College Helpdesk</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">🎓 College Helpdesk</div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#notices">Notices</a>
+            <a href="#faq">FAQ</a>
+        </div>
+    </nav>
+
+    <!-- Welcome section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="tag">YOUR SMART COLLEGE ASSISTANT</div>
+
+            <h1>
+                Welcome to<br>
+                <span>AI College Helpdesk</span>
+            </h1>
+
+            <p>
+                Get quick answers about courses, admissions,
+                examinations, scholarships and college services.
+            </p>
+
+            <a href="#services" class="btn">Explore Services</a>
+
+            <!-- Change URLs to your existing Flask routes -->
+            <a href="/register" class="btn">
+                Student Register
+            </a>
+
+            <a href="/login" class="btn">
+                Student Login
+            </a>
+        </div>
+
+        <div class="robot">🤖</div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+        <h2>How Can We Help You?</h2>
+
+        <p class="subtitle">
+            Explore our college information services
+        </p>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+                <div class="service-icon">📚</div>
+                <h3>Courses</h3>
+                <p>Explore college courses and program information.</p>
+                <a href="/courses" class="btn">View Courses</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📝</div>
+                <h3>Admissions</h3>
+                <p>Learn about admission procedures and requirements.</p>
+                <a href="/admissions" class="btn">Learn More</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📅</div>
+                <h3>Exams Information</h3>
+                <p>Find exam-related information and guidance.</p>
+                <a href="/exams" class="btn">View Details</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Notice Board -->
+    <section class="section" id="notices">
+        <h2>📢 College Notice Board</h2>
+
+        <p class="subtitle">
+            Important information for students
+        </p>
+
+        <div class="notice-box">
+            <ul>
+                <li>Check the official examination timetable.</li>
+                <li>Refer to the official college holiday notice.</li>
+                <li>Contact the college office for scholarship details.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Frequently Asked Questions -->
+    <section class="section" id="faq">
+        <h2>Frequently Asked Questions</h2>
+
+        <p class="subtitle">
+            Quick answers to common college questions
+        </p>
+
+        <div class="faq-box">
+
+            <details>
+                <summary>How can I check my result?</summary>
+                <p>
+                    Please check your university's official result portal.
+                </p>
+            </details>
+
+            <details>
+                <summary>How can I get a bonafide certificate?</summary>
+                <p>
+                    Please contact the college office for the application process.
+                </p>
+            </details>
+
+            <details>
+                <summary>Where can I find the syllabus?</summary>
+                <p>
+                    Please check your university's official syllabus.
+                </p>
+            </details>
+
+            <details>
+                <summary>How can I check attendance requirements?</summary>
+                <p>
+                    Please contact your department to confirm the requirements.
+                </p>
+            </details>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>AI College Helpdesk | BCA Internship Project</p>
+        <p>Smart Support for Every Student 🎓</p>
+    </footer>
+
+    <!-- Floating chatbot button -->
+    <a href="/chatbot" class="chat-float">
+        🤖 Open Chatbot
+    </a>
+
+</body>
+</html>

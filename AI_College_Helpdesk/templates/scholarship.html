@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship Information</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6fb;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #252b48;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px #ddd;
+        }
+
+        .card h3 {
+            color: #3048a5;
+        }
+
+        a {
+            color: #3048a5;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Scholarship Information</h1>
+    <p>Find information about college scholarships.</p>
+
+    <div class="card">
+        <h3>1. Scholarship Eligibility</h3>
+        <p>Please contact the college office to confirm eligibility requirements.</p>
+    </div>
+
+    <div class="card">
+        <h3>2. Scholarship Application</h3>
+        <p>Please contact the college office for application forms and submission details.</p>
+    </div>
+
+    <div class="card">
+        <h3>3. Required Documents</h3>
+        <p>Confirm the required documents with the college office before applying.</p>
+    </div>
+
+    <div class="card">
+        <h3>4. Scholarship Last Date</h3>
+        <p>Check the official college notice for the application deadline.</p>
+    </div>
+
+    <p><a href="{{ url_for('home') }}">← Back to Home</a></p> <br>
+    <p><a href="{{ url_for('chatbot') }}">🤖 Ask the Chatbot</a></p>
+</div>
+
+</body>
+</html>

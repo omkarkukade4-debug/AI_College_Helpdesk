@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ title }} - AI College Helpdesk</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <style>
+        .info-container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+        }
+
+        .info-card {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px #00000012;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 15px 0;
+            color: #3159cf;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="info-container">
+
+        <h1>{{ title }}</h1>
+
+        <p>{{ description }}</p>
+
+        {% for item in items %}
+            <div class="info-card">
+                <h3>📘 {{ item }}</h3>
+                <p>
+                    For detailed and updated information,
+                    please contact your college office
+                    or check the official college notice.
+                </p>
+            </div>
+        {% endfor %}
+
+        <a class="back-link" href="/">← Back to Home</a>
+        <br>
+        <a class="back-link" href="/chatbot">
+            🤖 Ask the Chatbot
+        </a>
+
+    </div>
+</body>
+</html>
